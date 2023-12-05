@@ -1,4 +1,4 @@
-with open("AdventOfCode23\Day 1\Data1.txt") as f:
+with open("AdventOfCode23\Day 1\Jack.txt") as f:
     lines = [line.strip() for line in f]
 
 digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -29,6 +29,7 @@ numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine
 # print(final)
 
 final2 = 0
+index = 1
 for value in lines:
     left_index = 0
     right_index = -3
@@ -72,6 +73,8 @@ for value in lines:
             else:
                 right_index_right -= 1
     final2 += int("".join(ans))
+    print(index, ans)
+    index += 1
 print(final2)
 
 
